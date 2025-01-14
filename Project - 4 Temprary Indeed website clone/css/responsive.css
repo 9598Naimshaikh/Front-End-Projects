@@ -1,0 +1,206 @@
+
+@media screen and (max-width: 990px) {
+    header nav ul{
+        display: none;
+    }
+
+    header .logo a img{
+        width: 90px;
+    }
+
+    .profile-content .prof-cont .user-profiles{
+        display: none;
+    }
+
+    .profile-content .post-job{
+        display: none;
+    }
+
+    .prof-cont::after{
+        content: "";
+        display: none;
+    }
+
+    header{
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header .nav-items{
+        width: auto;
+    }
+
+
+    /* ----------- hamburger menu styling.... */
+    header nav .hamburger {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    header nav .hamburger::before {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 2.4px;
+        background-color: #2d2e32;
+        transform: translateY(-8px);
+        box-shadow: 0 16px 0 #2d2e32;
+        transition: 0.3s ease;
+        border-radius: 5px;
+    }
+
+    header nav.active .hamburger::before {
+        transform: translateY(0) rotate(46deg);
+        box-shadow: 0 0 0 #fff;
+    }
+
+    header nav .hamburger::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 2.4px;
+        background-color: #2d2e32;
+        transition: 0.4s ease;
+        border-radius: 5px;
+    }
+
+    header nav.active .hamburger::after {
+        content: "";
+        position: absolute;
+        width: 28px;
+        height: 2.5px;
+        background-color: #2d2e32;
+        transform: translateY(0) rotate(-46deg);
+    }
+
+    .prof-cont .icon i{
+        font-size: 18px;
+    }
+
+
+
+    /* ============ container styling ==-- */
+    
+    .container .contents{
+        width: 100vw;
+        height: 100%;
+        padding: 10px 20px;
+    }
+
+    .contents .search-box{
+        width: 100%;
+        height: 70px;
+    }
+
+
+
+    /* =--------- main section > -------- */
+    .jobs-recent{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .container .contents{
+        width: 100vw;
+        height: 100%;
+        padding: 10px 20px;
+    }
+
+    .contents .search-box{
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .search-box .job-titlte-search{
+        width: 100%;
+        height: 50px;
+        /* background-color: rgb(161, 161, 161); */
+    }
+    .search-box .job-location{
+        width: 100%;
+        height: 50px;
+        /* background-color: red; */
+        border-top: 1px solid rgba(84, 84, 84, 0.256);
+    }
+
+    .search-box .find-job{
+        position: absolute;
+        bottom: -58px;
+        width: 100%;
+        height: auto;
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .search-box .find-job button{
+        width: 100%;
+        padding: 16px 16px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        background-color: rgba(0, 0, 177, 0.836);
+        color: white;
+        font-weight: 600;
+    }
+
+    .container{
+        width: 100%;
+        height: auto;
+        /* background-color: #d4d4d4; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .search-box .job-titlte-search ion-icon{
+        position: absolute;
+        top: 12%;
+        left: 2.5%;
+        font-size: 20px;
+    }
+    
+    .search-box .job-location ion-icon{
+        position: absolute;
+        top: 65%;
+        left: 2.5%;
+        font-size: 20px;
+    }
+
+    .contents .post-jobs{
+        margin-top: 50px;
+    }
+
+    .jobs-content-container .related-job-desc{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 1100px) {
+    
+}

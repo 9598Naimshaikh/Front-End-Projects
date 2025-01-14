@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    height: 100px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.logo {
+    text-decoration: none;
+    width: 200px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+nav ul li a .down-arrow {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a .down-arrow::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 1.2px;
+    background-color: black;
+    transform: translateX(-2px) rotate(42deg);
+    transition: 0.4s;
+}
+
+nav ul li a .down-arrow::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 1.2px;
+    background-color: black;
+    transform: translateX(2px) rotate(-42deg);
+    transition: 0.4s;
+}
+
+.lang {
+    display: none;
+}
+
+.language {
+    font-size: 30px;
+}
+
+nav .hamburger {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .hamburger::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2.5px;
+    background-color: #333;
+    transform: translateY(-9px);
+    transition: 0.4s;
+}
+
+nav .hamburger::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2.5px;
+    background-color: #333;
+    transform: translateY(9px);
+    box-shadow: 0 -9px 0 #333;
+    transition: 0.4s;
+}
+
+nav.active .hamburger::before {
+    transform: translate(0) rotate(46deg);
+}
+
+nav.active .hamburger::after {
+    transform: translate(0) rotate(-46deg);
+    box-shadow: 0 0 0 #333;
+}
+
+
+
+/* ==== Main > Container Styling ====== */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+    padding: 40px 0;
+}
+
+.container {
+    width: 100%;
+    /* background-color: #333; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.content {
+    max-width: 960px;
+    min-height: 40vh;
+    /* margin: 0 15vw; */
+    text-align: center;
+    padding: 20px 0;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.container h1 {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.container p {
+    font-size: 22px;
+    text-align: center;
+}
+
+.container .download-btn {
+    text-decoration: none;
+    background-color: rgb(63, 143, 255);
+    color: white;
+    padding: 13px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.container .download-btn:hover {
+    background-color: rgb(3, 108, 255);
+}
+
+
+
+/* ======= download-language-mod styling ======= */
+
+.download-language-mod {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-ultraEdit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* background-color: purple; */
+    width: 960px;
+    margin: 5px 0 20px 0;
+}
+
+.download-ultraEdit h1 {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.download-ultraEdit span {
+    font-size: 14px;
+}
+
+.download-ultraEdit h1 a {
+    font-weight: 400;
+    color: rgb(39, 39, 39);
+    font-size: 13px;
+}
+
+
+/* ====== donwloading languages styling ======== */
+
+.download-lang-box {
+    width: 100%;
+    /* background-color: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-lang-box .boxes {
+    width: 960px;
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    width: 300px;
+    min-height: 180px;
+    background-color: rgba(130, 130, 130, 0.1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 20px;
+
+}
+
+.box h2 {
+    font-size: 20px;
+}
+
+.box p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.box .downloading-bit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box .downloading-bit-btn a {
+    text-decoration: none;
+    color: white;
+    padding: 7px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.box .downloading-bit-btn a:nth-child(1) {
+    background-color: rgb(63, 143, 255);
+}
+
+.box .downloading-bit-btn a:nth-child(2) {
+    background-color: rgb(0, 197, 69);
+}
+
+.box .downloading-bit-btn a:nth-child(1):hover {
+    background-color: rgb(15, 115, 255);
+}
+
+.box .downloading-bit-btn a:nth-child(2):hover {
+    background-color: rgb(22, 255, 104);
+}
+
+
+/* ====== About Section styling ===== */
+.about {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.about-ultraEdit {
+    width: 960px;
+    height: 90%;
+    padding: 40px 0;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.join-ultraEdit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.left-ultraEdit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.subscribe-email-box {
+    /* width: 350px;
+    height: 250px; */
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+.subscribe-email-box h2 {
+    font-weight: 400;
+    color: rgb(63, 143, 255);
+}
+
+.subscribe-email-box .email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.subscribe-email-box .email label {
+    font-size: 14px;
+}
+
+.subscribe-email-box .email input {
+    width: 100%;
+    height: 40px;
+    padding: 20px 15px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.subscribe-email-box .sign-up {
+    width: 100%;
+    padding: 12px 22px;
+    background-color: rgb(63, 143, 255);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.about-ultraEdit .details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-ultraEdit .details h1 {
+    font-weight: 400;
+}
+
+.about-ultraEdit .details p {
+    font-size: 15px;
+}
+
+.about-ultraEdit p a {
+    color: rgb(63, 143, 255);
+}
+
+
+
+/* ======= footer Styling ====== */
+footer {
+    width: 100%;
+    min-height: 90vh;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer-container {
+    width: 960px;
+    height: 95%;
+    /* background-color: red; */
+}
+
+.represent-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.02fr;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.head h3 {
+    font-size: 15px;
+    margin-bottom: 10%;
+}
+
+.represent-content li {
+    list-style: none;
+    font-size: 13px;
+}
+
+.represent-content .item li a {
+    text-decoration: none;
+    color: black;
+}
+
+.represent-content .item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.subscribe-email-input-btn p {
+    font-size: 13px;
+}
+
+.subscribe-email-input-btn input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px 15px;
+    outline-color: aqua;
+    margin: 10px 0;
+}
+
+.subscribe-email-input-btn button {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(29, 173, 250);
+    cursor: pointer;
+}
+
+.subscribe-email-input-btn button:hover {
+    background-color: rgb(4, 152, 232);
+}
+
+
+/* ===== social-container styling ===== */
+.social-container {
+    margin-top: 24px;
+    width: 960px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.social-container img {
+    width: 170px;
+}
+
+.social-media-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.social-media-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    transition: 0.3s;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-media-links a ion-icon{
+    transition: transform 0.5s ease;
+}
+
+.social-media-links a ion-icon:hover {
+    transform: scale(1.3);
+}
+
+.copyright-reserved {
+    /* background-color: purple; */
+    padding: 10px 0;
+}
+
+.copyright-reserved p {
+    font-size: 13px;
+}

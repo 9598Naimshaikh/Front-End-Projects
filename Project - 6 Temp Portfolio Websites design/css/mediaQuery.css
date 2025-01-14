@@ -1,0 +1,245 @@
+
+@media screen and (max-width: 950px) {
+    .nav-links{
+        position: absolute;
+        right: 110%;
+        top: 14vh;
+        width: 50%;
+        height: 40vh;
+        background-color: rgba(255, 255, 255, 0.90);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        list-style: none;
+        font-size: 1.2rem;
+        z-index: 10;
+        padding: 20px 30px;
+    }
+    .desktop-nav.active .nav-links{
+        right: 0;
+    }
+    
+    .hamBurger{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        z-index: 10;
+    }
+    .naim-img{
+        width: 300px;
+        height: 300px;
+    }
+    .container{
+        gap:50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .naim-img{
+        width: 250px;
+        height: 250px;
+    }
+    .container{
+        gap: 50px;
+    }
+    
+    .content h2{
+        font-size: 1.5rem;
+
+    }
+    .content h1{
+        font-size: 2rem;
+    }
+    .content .btn a{
+        padding: 12px 22px;
+    }
+
+    .content{
+        gap: 8px;
+    }
+    .content .btn{
+        margin-top: 5px;
+    }
+
+    /* experience section */
+    .title{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .experience-title{
+        color: rgb(85, 85, 85);
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .logo{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .naim-img{
+        width: 200px;
+        height: 200px;
+    }
+    .content h2{
+        font-size: 1.3rem;
+
+    }
+    .content h1{
+        font-size: 1.8rem;
+    }
+    .content .btn a{
+        padding: 10px 15px;
+        font-size: 13px;
+        font-weight: 200;
+    }
+
+    .content{
+        gap: 5px;
+    }
+    .content .btn{
+        margin-top: 6px;
+    }
+    .content .btn{
+        gap: 0.7rem;
+    }
+
+}
+
+
+
+
+/* About CSS */
+
+@media screen and (max-width: 1150px) {
+    .about-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+        margin: 1rem 0;
+    }
+    .details-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .about-img{
+        position: relative;
+        width: 280px;
+        height: 250px;
+    }
+    #about{
+        height: 100vh;
+        margin: 2rem 0;
+    }
+    .arrow{
+        display: none;
+    }
+
+    .experience-box, .education-box{
+        width: 480px;
+        padding: 1.5rem 1rem;
+        gap: 5px;
+    }
+    
+    /* #projects{
+        height: fit-content;
+    } */
+}
+
+
+@media screen and (max-width: 600px) {
+    .education-container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    #about{
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .experience-box, .education-box{
+        width: 400px;
+        padding: 1rem 0.5rem;
+        gap: 5px;
+    }
+
+    /* Experience section  */
+    h3{
+        display: block;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    
+    article img{
+        height: 2.2rem;
+        cursor: pointer;
+    }
+    
+    
+}
+
+@media screen and (max-width: 420px) {
+    .experience-box, .education-box{
+        width: 280px;
+        padding: 1rem 0.5rem;
+        gap: 5px;
+    }
+    .about-img{
+        position: relative;
+        width: 250px;
+        height: 220px;
+    }
+    #about .top-text{
+        margin-top: 10px;
+        font-size: 0.8rem;
+    }
+    #about .head{
+        font-size: 2.5rem;
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .about-img{
+        width: 210px;
+        height: 190px;
+    }
+    .experience-box, .education-box{
+        width: 220px;
+        padding: 1rem 0.5rem;
+        gap: 5px;
+    }
+    .experience-box ion-icon, .education-box ion-icon{
+        font-size: 20px;
+    }
+    .experience-box h2, .education-box h2{
+        font-size: 1.2rem;
+    }
+    #about .head{
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    #experience{
+        margin: 0 5%;
+    }
+    #projects{
+        margin: 0 5% 0 5%;
+
+    }
+
+}
